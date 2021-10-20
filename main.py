@@ -74,7 +74,7 @@ from random import randrange
 
 
 
-
+"""
 #display the board exactly as show in the example
 def display_board(board):
     # The function accepts one parameter containing the board's current status
@@ -220,4 +220,15 @@ while victory_for(board, player) != True:
     make_list_of_free_fields(board)
     draw_move(board)
     display_board(board)
+"""
+
+#This is Branch "Branch1"
+
+import platform
+
+print("The following will demonstarte the platform module, by printing out the OS")
+
+print("Your OS is: ", platform.system())
+
+
 
