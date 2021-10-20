@@ -74,7 +74,7 @@ from random import randrange
 
 
 
-
+"""
 #display the board exactly as show in the example
 def display_board(board):
     # The function accepts one parameter containing the board's current status
@@ -220,4 +220,20 @@ while victory_for(board, player) != True:
     make_list_of_free_fields(board)
     draw_move(board)
     display_board(board)
+"""
+
+import random
+
+print("This branch will demonstrate the random module")
+
+correct_number = random.randint(1, 5)
+
+user_pick = int(input("Please pick a number 1-5:  "))
+
+if user_pick != correct_number:
+    print("Sorry, wrong number, try again")
+    print("The correct number was: ", correct_number)
+
+else:
+    print("You chose the correct number!")
 
