@@ -222,13 +222,57 @@ while victory_for(board, player) != True:
     display_board(board)
 """
 
-#This is Branch "Branch1"
+#THis is coding assignment 7
+#By: Colin Campbell
 
+
+import re
+import os
 import platform
 
-print("The following will demonstarte the platform module, by printing out the OS")
+#regex expression 1
 
-print("Your OS is: ", platform.system())
+print(os.name)
+print(platform.system())
+print(platform.release())
 
+
+#search for any numbers
+regex = "([0-9])"
+if re.search(regex, platform.release()):
+    print("numbers were found")
+else:
+    print("numbers were not found")
+
+
+
+
+print()
+print()
+
+#regex expression 2
+os_environ = str(os.environ)
+print(os.environ)
+
+#search for version numbers (decimals)
+regexb = "([0-9]*\.[0-9]+)"
+if re.findall(regexb, os_environ):
+    print("version numbers found")
+else:
+    print("no version numbers found")
+
+print()
+print()
+
+#regex expression 3
+os_urandom = str(os.urandom(5))
+print(os.urandom(5))
+
+#search for multiple chars next to each other
+regexc = "([a-zA-Z]+)"
+if re.findall(regexc, os_urandom):
+    print("chars next to each other found")
+else:
+    print("no chars next to each other found")
 
 
