@@ -5,7 +5,7 @@ def encase(): #wraps commands in double backslashes
     args = str(sys.argv)
     print(args.join("//"))
 
-def clean():
+def clean(): #remove single quotes
     args = str(sys.argv)
     print(args.replace("'", ""))
 
